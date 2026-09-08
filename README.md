@@ -11,10 +11,12 @@ key.
 ## Install
 
 ```sh
-npx skills add ajaxray/htmldoc-cli
+npx skills add ajaxray/htmldoc-skill
 ```
 
-(Replace `ajaxray/htmldoc-cli` with this skill's published repository.)
+Source: [ajaxray/htmldoc-skill](https://github.com/ajaxray/htmldoc-skill). The
+CLI it drives: [ajaxray/htmldoc-cli](https://github.com/ajaxray/htmldoc-cli),
+published on npm as [`htmldoc-cli`](https://www.npmjs.com/package/htmldoc-cli).
 
 ## One-time setup
 
@@ -37,15 +39,12 @@ After that, just ask your agent to share a file.
 
 ## Local development
 
-Outside this monorepo, the skill needs the published `htmldoc-cli` npm
-package: either installed globally (`htmldoc` on PATH) or resolvable via
-`npx -y htmldoc-cli`. While developing against
-an unpublished CLI, link it locally instead:
-
-```sh
-cd cli && npm link
-npm link htmldoc-cli   # from the repo root, or wherever npx will resolve from
-```
+The skill needs the `htmldoc-cli` npm package: either installed globally
+(`htmldoc` on PATH) or resolvable via `npx -y htmldoc-cli`. To try a skill
+change before pushing, copy this directory into a project's
+`.claude/skills/htmldoc/`. To test against an unpublished CLI, clone
+[ajaxray/htmldoc-cli](https://github.com/ajaxray/htmldoc-cli) and run
+`npm link` inside it.
 
 ## Learn more
 
