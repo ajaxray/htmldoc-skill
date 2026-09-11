@@ -8,6 +8,8 @@ that lives 30 days and can be updated in place. It works by driving the
 the skill never talks to the API directly and never sees or handles your API
 key.
 
+![Claude Code answering "share the report.html" with a link](https://raw.githubusercontent.com/ajaxray/htmldoc-cli/main/docs/agent.gif)
+
 ## Install
 
 ```sh
