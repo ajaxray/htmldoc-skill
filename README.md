@@ -16,7 +16,7 @@ key.
 npx skills add ajaxray/htmldoc-skill
 ```
 
-Then ask your agent: **"share this report"** (after the one-time setup below). It replies with the link and the expiry date.
+Then ask your agent in plain words: **"share this report"**, **"publish process.html with htmldoc"**, or **"make this plan shareable"** (after the one-time setup below). It replies with the link and the expiry date.
 
 Source: [ajaxray/htmldoc-skill](https://github.com/ajaxray/htmldoc-skill). The
 CLI it drives: [ajaxray/htmldoc-cli](https://github.com/ajaxray/htmldoc-cli),
