@@ -16,6 +16,8 @@ key.
 npx skills add ajaxray/htmldoc-skill
 ```
 
+Then ask your agent: **"share this report"** (after the one-time setup below). It replies with the link and the expiry date.
+
 Source: [ajaxray/htmldoc-skill](https://github.com/ajaxray/htmldoc-skill). The
 CLI it drives: [ajaxray/htmldoc-cli](https://github.com/ajaxray/htmldoc-cli),
 published on npm as [`htmldoc-cli`](https://www.npmjs.com/package/htmldoc-cli).
