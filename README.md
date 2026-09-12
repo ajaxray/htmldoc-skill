@@ -48,6 +48,10 @@ change before pushing, copy this directory into a project's
 [ajaxray/htmldoc-cli](https://github.com/ajaxray/htmldoc-cli) and run
 `npm link` inside it.
 
+## Feedback
+
+Skill misbehaving: [issues here](https://github.com/ajaxray/htmldoc-skill/issues). Feature requests, roadmap votes, and anything about the site: [ajaxray/htmldoc.space](https://github.com/ajaxray/htmldoc.space/issues).
+
 ## Learn more
 
 [htmldoc.space](https://htmldoc.space)
