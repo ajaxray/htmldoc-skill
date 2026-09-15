@@ -22,24 +22,18 @@ Source: [ajaxray/htmldoc-skill](https://github.com/ajaxray/htmldoc-skill). The
 CLI it drives: [ajaxray/htmldoc-cli](https://github.com/ajaxray/htmldoc-cli),
 published on npm as [`htmldoc-cli`](https://www.npmjs.com/package/htmldoc-cli).
 
-## One-time setup
+## First run
 
-Before the skill can upload anything, you need an API key:
+Nothing to set up. The first time you ask your agent to share a file, the
+CLI has no API key yet, so the agent runs `htmldoc login`, which prints an
+approval link (and opens it in your browser), then waits with
+`htmldoc login --wait`. Sign in with GitHub, check that the code on the page
+matches the one the agent showed you, and click Approve. The CLI stores your
+key and the agent finishes the share. The agent announces each of those steps
+before it happens and never sees the key.
 
-1. Visit [htmldoc.space](https://htmldoc.space) and sign in with GitHub.
-2. Copy the API key shown on your dashboard.
-3. In a terminal, run:
-
-   ```sh
-   npm i -g htmldoc-cli
-   htmldoc login
-   ```
-
-   and paste the key when prompted. (Skipping the global install also works:
-   the agent falls back to `npx -y htmldoc-cli`, which is slower on first run.) This step must be run by you, in your own
-   terminal — the agent will never ask for or handle the key.
-
-After that, just ask your agent to share a file.
+If you prefer the old way, `htmldoc login --paste` accepts the key from your
+dashboard in an interactive terminal.
 
 ## Local development
 
