@@ -80,8 +80,9 @@ the user off to install or copy anything.
 
 1. Tell the user, in one sentence, that htmldoc.space needs an account signed
    in with GitHub, so you are opening its approval page for them.
-2. Run `htmldoc login`. It prints the same sentence, then two lines on stderr
-   and exits at once:
+2. Run `htmldoc login --no-wait`. It prints the same sentence, then two lines
+   on stderr and exits at once (`--no-wait` keeps it from blocking when your
+   shell looks like a terminal):
 
    ```
    Open this link to approve: https://htmldoc.space/connect/AbC123xYz789
@@ -110,8 +111,9 @@ the user off to install or copy anything.
    already used) and stop; the user can ask you to try again, which starts a
    fresh `htmldoc login`.
 
-If `htmldoc login` itself exits 1 with a line about needing an interactive
-terminal, the installed CLI predates the browser pairing. Tell the user to
+If `htmldoc login --no-wait` itself exits 1 with a line about needing an
+interactive terminal or an unknown `--no-wait` option, the installed CLI
+predates the browser pairing. Tell the user to
 run `npm i -g htmldoc-cli@latest` (or remove the global install so
 `npx -y htmldoc-cli` is used) and stop.
 
@@ -150,7 +152,7 @@ link refreshed."
 **Agent runs:** `htmldoc report.html` (exits 1: `no API key configured.`)
 **Agent replies:** "htmldoc.space needs an account signed in with GitHub, so
 I'm opening its approval page for you."
-**Agent runs:** `htmldoc login`
+**Agent runs:** `htmldoc login --no-wait`
 **Agent replies:** "Open this link to approve:
 https://htmldoc.space/connect/AbC123xYz789 (code AbC123xYz789). Your browser
 should open it too. Approve it only if you just asked me to share this file.
