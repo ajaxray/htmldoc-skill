@@ -1,6 +1,6 @@
 ---
 name: htmldoc
-description: Publish a single local HTML or Markdown file to a share link that lives 30 days, by running the htmldoc-cli. Trigger on requests like "share this doc", "share this page online", "share this plan", "publish this with htmldoc", or "make this shareable".
+description: Publish a single local HTML or Markdown file to an unlisted share link by running the htmldoc-cli. Links live 30 days unless the owner pins them on the dashboard. Trigger on requests like "share this doc", "share this page online", "share this plan", "publish this with htmldoc", or "make this shareable".
 ---
 
 # htmldoc
@@ -48,9 +48,10 @@ htmldoc <path>
 Do not add any other flags on first upload.
 
 - Capture the **last line of stdout** — that is the share URL.
-- Read stderr for the `id: <id>  expires: <iso>` line.
-- Reply to the user with the link, the expiry date, and "say 'share again' to
-  update it".
+- Read stderr for the `id: <id>  expires: <iso>` line. A page pinned on the
+  dashboard shows `expires: never (pinned)`.
+- Reply to the user with the link, the expiry date (or "never, it's pinned"),
+  and "say 'share again' to update it".
 - Remember the id (it's also the last path segment of the URL) for the rest of
   this session, keyed to the file you shared.
 
@@ -63,7 +64,7 @@ htmldoc <path> --update <id>
 ```
 
 using the id you remembered earlier in the session. This keeps the same URL
-and resets the 30-day expiry.
+and resets the 30-day expiry; a pinned page stays pinned.
 
 ## On failure
 

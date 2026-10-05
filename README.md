@@ -3,7 +3,8 @@
 A [skills.sh](https://skills.sh) skill for Claude, Codex, Pi, or
 [any AI agent that supports skills](https://www.skills.sh/agent). It lets you say "share this doc", "share this plan
 online", or "publish this with htmldoc" and get back an unlisted share link
-that lives 30 days and can be updated in place. It works by driving the
+that lives 30 days unless you pin it on the dashboard, and can be updated in
+place. It works by driving the
 [`htmldoc-cli`](https://www.npmjs.com/package/htmldoc-cli) command-line tool —
 the skill never talks to the API directly and never sees or handles your API
 key.
