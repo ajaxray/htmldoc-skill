@@ -29,6 +29,15 @@ write it to a fresh directory first (`dir=$(mktemp -d)`), using a sensible
 filename from the content's title or topic (e.g. `$dir/report.html`), then
 upload that path.
 
+## Diagrams in Markdown
+
+Markdown pages render GitHub-flavoured Markdown, and a ```` ```mermaid ````
+code block renders as a diagram (flowchart, sequence, class, state, Gantt,
+and the other Mermaid types). When you write a Markdown file to share and it
+needs a diagram, use a Mermaid block rather than ASCII art. Get the syntax
+right: a block that does not parse is shown as plain code. Do not rewrite a
+file the user wrote just to add diagrams.
+
 ## Command
 
 The CLI's command is `htmldoc`. Use it directly when it is installed
